@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  background: #f6f8fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  margin-bottom: 32px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a {
+  color: #2166e7;
+  margin-right: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a:hover {
+  color: #1a49a3;
+}
+
+form {
+  background: #fff;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #0001;
+  max-width: 360px;
+  margin: 32px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+input, textarea {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus, textarea:focus {
+  border-color: #2166e7;
+}
+
+button {
+  background: #2166e7;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, button:active {
+  background: #1743a3;
+}
+
+.text-red-500, .text-danger {
+  color: #ff3333;
+  font-size: 0.96em;
+  margin-top: -10px;
+}
+.loading-spinner {
+  margin: 40px auto;
+  border: 5px solid #e3e8ef;
+  border-top: 5px solid #2166e7;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
